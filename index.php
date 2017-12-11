@@ -23,14 +23,19 @@ foreach ($data as $character) {
             $number,
             "+12674407881",
             // Step 6: Set the URL Twilio will request when the call is answered.
-            array("url" => "http://demo.twilio.com/welcome/voice/")           
-        );
-        //echo "Started call: " . $call->sid;
-        echo "<Response>
+           // array("url" => "http://demo.twilio.com/welcome/voice/")
+         echo "<Response>
                 <Say>
                     Capital of " . $body . " is " . $city . "
                 </Say>
-                </Response>" . $call->sid;
+                </Response>";   
+        );
+        echo "Started call: " . $call->sid;
+        /*echo "<Response>
+                <Say>
+                    Capital of " . $body . " is " . $city . "
+                </Say>
+                </Response>" . $call->sid;*/
                 
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
