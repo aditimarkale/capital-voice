@@ -17,16 +17,15 @@ foreach ($data as $character) {
             try {
         // Initiate a new outbound call
         $call = $client->account->calls->create(
-            "+12678108571",
+            $number,
             "+12644407881",
             // Step 6: Set the URL Twilio will request when the call is answered.
-            array("url" => "http://demo.twilio.com/welcome/voice/")
-             /*echo "<Response>
-    <Message>
-           Capital of " . $body . " is " . $city . "
-    </Message>
-</Response>
-";*/
+            //array("url" => "http://demo.twilio.com/welcome/voice/")
+            echo ("<Response>
+                <Say>
+                    Capital of " . $body . " is " . $city . "
+                </Say>
+                </Response>");
             
         );
         echo "Started call: " . $call->sid;
