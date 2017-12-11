@@ -13,7 +13,10 @@ $data = json_decode($file, true);
 
 foreach ($data as $character) {  
         if($character['country'] == $body) {
-          $city = $character['city']; 
+          $city = $character['city'];
+            break;
+        }
+}
             try {
         // Initiate a new outbound call
         $call = $client->account->calls->create(
@@ -34,13 +37,6 @@ foreach ($data as $character) {
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
     }
-           
-            break;
-        }
-    }
-
-
 
 header('Content-Type: text/xml');
-
 ?>
