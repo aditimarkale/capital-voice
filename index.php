@@ -21,7 +21,7 @@ foreach ($data as $character) {
         // Initiate a new outbound call
         $call = $client->account->calls->create(
             $number,
-            "+12644407881"
+            "+12674407881"
             // Step 6: Set the URL Twilio will request when the call is answered.
             //array("url" => "http://demo.twilio.com/welcome/voice/")
             
