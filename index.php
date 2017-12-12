@@ -23,14 +23,14 @@ foreach ($data as $character) {
             $number,
             "+12674407881",
             // Step 6: Set the URL Twilio will request when the call is answered.
-           array("url" => "")
-              
+           //array("url" => "http://demo.twilio.com/welcome/voice/")
+           array("url" => "https://capitalvoice.herokuapp.com/")   
         );
         echo "Started call: " . $call->sid;
         /*echo "<Response>
                 <Say>
                     Capital of " . $body . " is " . $city . "
-                </Say>
+                </Say>  
                 </Response>" . $call->sid;*/
                 
     } catch (Exception $e) {
@@ -39,3 +39,8 @@ foreach ($data as $character) {
 
 header('Content-Type: text/xml');
 ?>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Response><Say voice="alice">Capital</Say></Response>
+
