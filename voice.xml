@@ -1,5 +1,5 @@
 <Response>
     <Say>
-          Capital is ' . $city . '
+          Capital is <?php echo $city ?>
     </Say>
 </Response>

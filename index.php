@@ -10,6 +10,7 @@ $body = $_POST['Body'];
 $url = 'https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-capital-city.json';
 $file = file_get_contents($url);
 $data = json_decode($file, true);
+global $city;
 
 foreach ($data as $character) {  
         if($character['country'] == $body) {
