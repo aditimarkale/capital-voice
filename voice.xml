@@ -1,4 +1,4 @@
 <Response>
-    <Say>
+    <Say><?php echo $_REQUEST['City']; ?>
     </Say>
 </Response>

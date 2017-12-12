@@ -19,11 +19,11 @@ foreach ($data as $character) {
             break;
         }
 }
-$xml = new DOMDocument();                                  
-$xml_city = $xml->createElement("Say", $city);            
+'City'=>$city
+/*$xml = new DOMDocument();                                  
+$xml_city = $xml->createElement("Say",'city');            
 $xml->appendChild($xml_city);                        
-$xml->save("voice.xml"); 
-
+$xml->save("voice.xml"); */
 
             try {
         // Initiate a new outbound call
