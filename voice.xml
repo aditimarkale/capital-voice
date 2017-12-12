@@ -1,5 +1,4 @@
 <Response>
     <Say>
-          Capital is <?php echo $city ?>
     </Say>
 </Response>

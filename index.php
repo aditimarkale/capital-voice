@@ -7,9 +7,10 @@
 
 $number = $_POST['From'];
 $body = $_POST['Body'];
+$file = "voice.xml";
 $url = 'https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-capital-city.json';
-$file = file_get_contents($url);
-$data = json_decode($file, true);
+$file1 = file_get_contents($url);
+$data = json_decode($file1, true);
 global $city;
 
 foreach ($data as $character) {  
@@ -19,6 +20,14 @@ foreach ($data as $character) {
             break;
         }
 }
+$xml= simplexml_load_file($file);
+
+//assign auth id
+$xml->Say = $city;
+
+//store the value into the file
+file_put_contents($file, $xml->asXML());
+
             try {
         // Initiate a new outbound call
         $call = $client->account->calls->create(
