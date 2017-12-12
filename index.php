@@ -5,11 +5,11 @@
     $auth_token = '6a7fed7f68a9d89d75996bc165982d2b'; 
     $client = new Client($account_sid, $auth_token); 
 
-/*$number = $_POST['From'];
+$number = $_POST['From'];
 $body = $_POST['Body'];
 $url = 'https://raw.githubusercontent.com/samayo/country-json/master/src/country-by-capital-city.json';
 $file = file_get_contents($url);
-$data = json_decode($file, true);*/
+$data = json_decode($file, true);
 
 /*foreach ($data as $character) {  
         if($character['country'] == $body) {
