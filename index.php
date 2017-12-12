@@ -11,12 +11,13 @@ $url = 'https://raw.githubusercontent.com/samayo/country-json/master/src/country
 $file = file_get_contents($url);
 $data = json_decode($file, true);
 
-/*foreach ($data as $character) {  
+foreach ($data as $character) {  
         if($character['country'] == $body) {
           $city = $character['city'];
+            echo $city;
             break;
         }
-}*/
+}
             try {
         // Initiate a new outbound call
         $call = $client->account->calls->create(
@@ -24,7 +25,7 @@ $data = json_decode($file, true);
             "+12674407881",
             // Step 6: Set the URL Twilio will request when the call is answered.
            //array("url" => "http://demo.twilio.com/welcome/voice/")
-           array("url" => "https://troubled-gun-1513.twil.io/assets/voice.php")   
+           array("url" => "https://troubled-gun-1513.twil.io/assets/voice.xml")   
         );
         //echo "Started call: " . $call->sid;
         
