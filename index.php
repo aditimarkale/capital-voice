@@ -19,7 +19,6 @@ foreach ($data as $character) {
             break;
         }
 }
-'City'=>$city
 /*$xml = new DOMDocument();                                  
 $xml_city = $xml->createElement("Say",'city');            
 $xml->appendChild($xml_city);                        
@@ -34,11 +33,19 @@ $xml->save("voice.xml"); */
            //array("url" => "http://demo.twilio.com/welcome/voice/")
            array("url" => "https://troubled-gun-1513.twil.io/assets/voice.xml")   
         );
-        //echo "Started call: " . $call->sid;
+   
         
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
     }
+     echo "Started call: " . $call->sid;
+/*
+
+        $response = new Twiml();
+        $response->say($city, ['voice' => 'alice']);
+        echo $response;
+*/
+
 
 header('Content-Type: text/xml');
 ?>
