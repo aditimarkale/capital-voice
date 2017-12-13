@@ -31,7 +31,8 @@ $xml->save("voice.xml"); */
             "+12674407881",
             // Step 6: Set the URL Twilio will request when the call is answered.
            //array("url" => "http://demo.twilio.com/welcome/voice/")
-           array("url" => "https://raw.githubusercontent.com/aditimarkale/capital-voice/master/voice.php")   
+           //array("url" => "https://raw.githubusercontent.com/aditimarkale/capital-voice/master/voice.php")   
+            array("url" => "https://aditivoice.herokuapp.com/")   
         );
    
         
