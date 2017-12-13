@@ -27,11 +27,20 @@ foreach ($data as $character) {
             "+12674407881",
             // Step 6: Set the URL Twilio will request when the call is answered.
            //array("url" => "http://demo.twilio.com/welcome/voice/")
-           array("url" => "https://troubled-gun-1513.twil.io/assets/voice.html.php")   
+           array("url" => "https://troubled-gun-1513.twil.io/assets/index.php")   
         );
                 
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
     }
+
 header('Content-Type: text/xml');
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 ?>
+
+<?xml version="1.0" encoding= "UTF-8" ?>
+<Response>
+    <Say>
+        <?php echo $city; ?>
+    </Say>
+</Response>
